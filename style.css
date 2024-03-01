@@ -10,7 +10,7 @@ body {
     height: 100vh;
     margin: 0;
     width: 100%;
-    background: linear-gradient(45deg,#494F55,#413839,#36454F,#1A2421,#e6a216);
+    background: linear-gradient(45deg,#494F55,#413839,#36454F,#1A2421,#e6a216,orange);
     background-size: 300% 300%;
     animation: color 12s ease-in-out infinite;
 }
