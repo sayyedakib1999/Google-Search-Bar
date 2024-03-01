@@ -10,7 +10,7 @@ body {
     height: 100vh;
     margin: 0;
     width: 100%;
-    background: linear-gradient(45deg,#000000,#fff);
+    background: linear-gradient(45deg,#494F55,#413839,#36454F,#1A2421);
     background-size: 300% 300%;
     animation: color 12s ease-in-out infinite;
 }
@@ -32,15 +32,90 @@ body {
 }
 
 #searchInput {
-    margin-right: 5px; /* Adjust spacing between input and button */
-    padding: 5%;
-    border-color: #000000;
-    cursor: pointer;
-    border-radius: 50px solide red;
-    box-shadow: 5px 5px 5px #ffffff ;
+    border: 2px solid transparent;
+    width: 25em;
+    height: 3em;
+    padding-left: 0.8em;
+    outline: none;
+    overflow: hidden;
+    background-color: #F3F3F3;
+    border-radius: 10px;
+    transition: all 0.5s;
+}
+#searchInput:hover,
+#searchInput:focus {
+  border: 2px solid #000000;
+  box-shadow: 0px 0px 0px 7px #008542;
+  background-color: white;
 }
 
-#searchBtn {
+
+
+button {
+    font-size: 15px;
+    background-color: #008542;
+    color: #fff;
+    text-shadow: 0 2px 0 rgb(0 0 0 / 25%);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    border: 0;
+    z-index: 1;
+    user-select: none;
     cursor: pointer;
-    padding: 10px 8px;
-}
+    text-transform: uppercase;
+    white-space: unset;
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+    font-weight: 900;
+    transition: all 0.7s cubic-bezier(0, 0.8, 0.26, 0.99);
+  }
+  
+  button:before {
+    position: absolute;
+    pointer-events: none;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    content: "";
+    transition: 0.7s cubic-bezier(0, 0.8, 0.26, 0.99);
+    z-index: -1;
+    background-color: #008542 !important;
+    box-shadow: 0 -4px rgb(21 108 0 / 50%) inset,
+      0 4px rgb(100 253 31 / 99%) inset, -4px 0 rgb(100 253 31 / 50%) inset,
+      4px 0 rgb(21 108 0 / 50%) inset;
+  }
+  
+  button:after {
+    position: absolute;
+    pointer-events: none;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    content: "";
+    box-shadow: 0 4px 0 0 rgb(0 0 0 / 15%);
+    transition: 0.7s cubic-bezier(0, 0.8, 0.26, 0.99);
+  }
+  
+  button:hover:before {
+    box-shadow: 0 -4px rgb(0 0 0 / 50%) inset, 0 4px rgb(255 255 255 / 20%) inset,
+      -4px 0 rgb(255 255 255 / 20%) inset, 4px 0 rgb(0 0 0 / 50%) inset;
+  }
+  
+  button:hover:after {
+    box-shadow: 0 4px 0 0 rgb(0 0 0 / 15%);
+  }
+  
+  button:active {
+    transform: translateY(4px);
+  }
+  
+  button:active:after {
+    box-shadow: 0 0px 0 0 rgb(0 0 0 / 15%);
+  }
+  
